@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מריאנה — בניתי AI בעצמי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2B2B2B;
+    --gold: #D4A853;
+    --cream: #FAF7F2;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Heebo', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    background: var(--ink);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+  }
+
+  .hero-image .crop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 426px;
+    overflow: hidden;
+    direction: ltr;
+  }
+
+  .hero-image .crop img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    display: block;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--ink) 30%, rgba(43,43,43,0.55) 65%, rgba(43,43,43,0.15) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 8vw;
+  }
+
+  .hero-content .eyebrow {
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content .tagline {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 300;
+    color: #E8E1D5;
+    max-width: 34ch;
+  }
+
+  /* ===== Sections ===== */
+  section.block {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 5.5rem 6vw;
+  }
+
+  section.block .label {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  section.block h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  section.block p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: #3A3A3A;
+  }
+
+  .divider {
+    max-width: 780px;
+    margin: 0 auto;
+    height: 1px;
+    background: rgba(43,43,43,0.12);
+  }
+
+  .agent-block {
+    background: var(--white);
+  }
+
+  .agent-block .sheet {
+    margin-top: 2rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(43,43,43,0.12);
+  }
+
+  .agent-block .sheet img {
+    width: 100%;
+    display: block;
+  }
+
+  .agent-block .sheet-caption {
+    font-size: 0.85rem;
+    color: #8A8A8A;
+    margin-top: 0.6rem;
+    font-weight: 300;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 4rem 6vw 5rem;
+    color: #6B6B6B;
+  }
+
+  footer .closing {
+    font-size: 1.25rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  footer .signature {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  footer .signature img {
+    height: 28px;
+    width: auto;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 640px) {
+    .hero-image .crop { width: 55vw; }
+    section.block { padding: 3.5rem 6vw; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-image">
+      <div class="crop">
+        <img src="assets/agent-multi-angle.png" alt="">
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="eyebrow">תיק עבודות אישי</div>
+      <h1>מנהלת. אמא. בניתי סוכן AI בעצמי.</h1>
+      <p class="tagline">מנהלת ענף מזון, אמא ל-3 — ובנתה סוכן AI ראשון.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">מי אני</div>
+    <p>מריאנה. מנהלת את ענף המזון בקיבוץ שער העמקים מ-2018 — צוות של כ-40 עובדים, מחזור שנתי של כ-11 מיליון ש"ח. הגיעה לתפקיד לא מרקע טכני, אלא מניהול אדמיניסטרטיבי — למדה מהתבוננות עד שהפכה להכרחית. אותה גישה הביאה גם לבניית עמית.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="block agent-block">
+    <div class="label">הכירו את עמית</div>
+    <p>זו <strong>עמית</strong>. נוצרה במהלך 8 מפגשי הקמה. לא עוזרת — שותפה. ישירה, לא מחניפה: אם משהו נראה לה לא נכון, היא אומרת את זה. יודעת להגיד "אני לא יודעת" במקום להמציא. ונותנת למריאנה את הדחיפה שהיא עצמה ביקשה — כי גם מי שיש לה מוטיבציה גבוהה, לפעמים צריכה מישהי שתדחוף אותה קדימה.</p>
+    <div class="sheet">
+      <img src="assets/agent-multi-angle.png" alt="עמית — ארבעה כיוונים">
+    </div>
+    <div class="sheet-caption">עמית, מכל הזוויות.</div>
+  </section>
+
+  <footer>
+    <div class="closing">זהו. זה הסיפור.</div>
+    <div class="signature">
+      <img src="assets/logo.png" alt="לוגו ענף המזון">
+      <span>מריאנה · מנהלת ענף המזון, קיבוץ שער העמקים</span>
+    </div>
+  </footer>
+
+</body>
+</html>
